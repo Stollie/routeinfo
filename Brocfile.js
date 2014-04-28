@@ -59,9 +59,10 @@ module.exports = function (broccoli) {
     'ember.js',
     'ic-ajax/dist/named-amd/main.js',
     'ember-data.js',
-    'ember-fastclick.js',
-    'ember-animated-outlet.js',
-    'ember-touch.js',
+    'ember-fastclick/lib/ember-fastclick.js',
+    'ember-animated-outlet/dist/ember-animated-outlet.js',
+//    'ember-animated-outlet/dist/ember-animated-outlet.css',
+    'ember-touch/dist/ember-touch.js',
     'ember-resolver.js',
     'ember-shim.js'
   ];
