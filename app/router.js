@@ -2,15 +2,15 @@ var Router = Ember.Router.extend({
   rootURL: ENV.rootURL,
   location: 'auto',
   events: {
-      goToPost: function(post) {
-          this.transitionToAnimated('post', {posts: 'slideLeft'}, post);
+      goToPost: function(track) {
+          this.transitionToAnimated('track', {tracks: 'slideLeft'}, track);
       }
   }
 });
 
 Router.map(function() {
-  this.resource('posts', function() {
-    this.route('index');
+  this.resource('tracks', function() {
+    this.resource('track', { path: ':track_id' });
   });
 });
 

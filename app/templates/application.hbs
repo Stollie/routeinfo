@@ -1,3 +1,12 @@
+<nav {{bind-attr class="controller.menuVisible :visible"}}>
+    <h3>Push Menu</h3>
+    <ul class="nav affix-top">
+        <li>{{#link-to 'tracks.index' }}Tracks{{/link-to}}</li>
+        <li><a href="#">Anders</a></li>
+    </ul>
+
+</nav>
+
 <h2 id='title'>Welcome to Ember.js</h2>
 
 {{outlet}}

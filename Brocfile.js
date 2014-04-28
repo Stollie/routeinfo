@@ -61,10 +61,10 @@ module.exports = function (broccoli) {
     'ember-data.js',
     'ember-fastclick/lib/ember-fastclick.js',
     'ember-animated-outlet/dist/ember-animated-outlet.js',
-//    'ember-animated-outlet/dist/ember-animated-outlet.css',
     'ember-touch/dist/ember-touch.js',
     'ember-resolver.js',
-    'ember-shim.js'
+    'ember-shim.js',
+    'bootstrap/dist/js/bootstrap.min.js'
   ];
 
   var applicationJs = preprocessJs(appAndDependencies, '/', prefix);
@@ -102,6 +102,25 @@ module.exports = function (broccoli) {
     'public',
     styles
   ];
+
+  // Vendor files
+
+  var bootstrapStyles = pickFiles('vendor', {
+    srcDir: '/bootstrap/dist/css',
+    files: [
+        'bootstrap.min.css'
+        ],
+    destDir: '/assets/'
+  });
+
+//  var bootstrapFonts = pickFiles('vendor', {
+//    srcDir: '/bootstrap/dist/fonts',
+//    files: ['*'],
+//    destDir: '/assets/fonts/'
+//  });
+
+  var vendorTrees = [bootstrapStyles];
+  outputTrees = outputTrees.concat(vendorTrees);
 
   // Testing
 

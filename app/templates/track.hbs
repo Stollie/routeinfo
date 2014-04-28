@@ -1,0 +1,31 @@
+<header id="header" class="navbar">
+  <a href="#" class="backToPost">
+    <button class="btn btn-link pull-left white header-btn">
+      <i class="icon-chevron-sign-left" />
+      | Back
+    </button>
+  </a>
+    <a class="navbar-brand white">Post</a>
+</header>
+
+<section id="content">
+    <div class="main">
+        <div clas="row">
+            <div class="col">
+                <div class="clearfix" />
+                <h4>
+                   <i class="icon-pencil"> {{title}}  </i>
+                </h4>
+                <h5>{{body}}</h5>
+                 <h4>
+                    Comments
+                 </h4>
+                <ul>
+                   {{#each comment in comments}}
+                       <li>{{comment.text}}</i>
+                   {{/each}}
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>

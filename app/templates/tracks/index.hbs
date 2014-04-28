@@ -1,0 +1,32 @@
+
+<header id="header" class="navbar">
+    <button class="btn btn-link pull-left nav-toggle">
+        <i class="icon-reorder icon-xlarge text-default white" />
+    </a>
+    <a class="navbar-brand white">AnimGest</a>
+</header>
+
+<section id="content">
+    <div class="main">
+        <div clas="row">
+            <div class="col">
+                <div class="clearfix" />
+                <h4>
+                   <i class="icon-th-list" />  &nbsp; | Posts
+                </h4>
+                <div class="row-fluid">
+                    <div class="list-group m-b-small">
+                    {{#each post in controller}}
+                        <div class="list-group-item">
+                            {{post.title}}
+                        </div>
+                    {{/each}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+{{animated-outlet name="tracks"}}
